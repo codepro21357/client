@@ -15,15 +15,18 @@ import { useRouter } from "next/navigation";
 import useAxiosPrivate from "@/hooks/useAxiosPrivate";
 import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { deleteUserAccount } from "@/services/users/api";
+import { clearUser } from "@/redux/slice/userSlice";
 
 const DeleteAccount = () => {
   const user = useAppSelector((state) => state.user?.user);
   const router = useRouter();
   const axiosPrivate = useAxiosPrivate();
+  const dispatch = useAppDispatch();
 
   const { mutate: deleteUserMutation, isPending } = useMutation({
     mutationFn: deleteUserAccount,
     onSuccess: () => {
+      dispatch(clearUser())
       router.push("/");
     },
     onError: () => {

@@ -38,7 +38,17 @@ const Login = () => {
     try {
       await loginUserMutation(data);
     } catch (err: any) {
-      toast.error("Something went wrong, please try again");
+      let message = "Something went wrong, please try again";
+
+      if (err instanceof Error) {
+        message = err.message;
+      }
+
+      if (err?.response) {
+      message = err?.response?.data?.message || "Something went wrong, please try again"
+      }
+
+      toast.error(message);
     }
   };
 
