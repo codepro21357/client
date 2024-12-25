@@ -2,8 +2,8 @@ import { Server } from 'socket.io';
 import config from 'config';
 import logger from './utils/logger.utils';
 
-const clientUrl = config.get<string>('clientUrl');
-const adminUrl = config.get<string>('adminUrl');
+// const clientUrl = config.get<string>('clientUrl');
+// const adminUrl = config.get<string>('adminUrl');
 
 // const io = new Server({
 //   cors: {
