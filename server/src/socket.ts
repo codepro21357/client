@@ -5,7 +5,11 @@ import logger from './utils/logger.utils';
 const clientUrl = config.get<string>('clientUrl');
 const adminUrl = config.get<string>('adminUrl');
 
-const io = new Server();
+const io = new Server({
+  cors: {
+    origin: ["https://www.reinholders.com", "https://www.identity.reinholders.com"],
+  },
+});
 
 
 interface IUser {
