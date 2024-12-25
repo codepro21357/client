@@ -20,7 +20,7 @@ const nextConfig = {
       },
       {
         source: "/api/:path*",
-        destination: "https://api.reinholders.com/api/:path*",
+        destination: "https://uniqueserver-rzfq.onrender.com/api/:path*",
       },
     ];
   },
