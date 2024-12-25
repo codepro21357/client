@@ -5,9 +5,23 @@ import logger from './utils/logger.utils';
 const clientUrl = config.get<string>('clientUrl');
 const adminUrl = config.get<string>('adminUrl');
 
+// const io = new Server({
+//   cors: {
+//     origin: ["https://www.reinholders.com/", "https://identity.reinholders.com/", "https://reinadmin.vercel.app/", "https://cryptechy.vercel.app/", "https://uniqueserver-rzfq.onrender.com/"],
+//   },
+// });
+
 const io = new Server({
   cors: {
-    origin: ["https://www.reinholders.com/", "https://identity.reinholders.com/", "https://reinadmin.vercel.app/", "https://cryptechy.vercel.app/", "https://uniqueserver-rzfq.onrender.com/"],
+    origin: [
+      "https://www.reinholders.com/",
+      "https://identity.reinholders.com/",
+      "https://reinadmin.vercel.app/",
+      "https://cryptechy.vercel.app/",
+      "https://uniqueserver-rzfq.onrender.com/"
+    ],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
   },
 });
 
