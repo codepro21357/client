@@ -26,7 +26,7 @@ const corsOptions = {
 
 app.set('trust proxy', true);
 app.use(express.urlencoded({ extended: false }));
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json({ limit: '50mb' }));

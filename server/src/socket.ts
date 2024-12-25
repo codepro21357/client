@@ -20,7 +20,7 @@ const io = new Server({
       "https://cryptechy.vercel.app/",
       "https://uniqueserver-rzfq.onrender.com/"
     ],
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", 'DELETE', 'OPTIONS'],
     allowedHeaders: ["Content-Type"],
   },
 });
