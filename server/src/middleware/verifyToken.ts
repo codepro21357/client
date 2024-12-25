@@ -83,10 +83,8 @@ export const verifyTokenAndAdmin = (
   next: NextFunction,
 ) => {
   verifyToken(req, res, () => {
-    console.log('Checking admin...', req.user);
 
     if (req.user.role === 'admin') {
-      console.log('Is admin...');
       return next();
     }
     return res
