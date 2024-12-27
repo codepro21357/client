@@ -59,7 +59,7 @@ const Navbar = () => {
   <header className="w-full fixed text-white bg-soft-black z-50">
     <div className="p-1 text-[8px] text-center text-red-500 bg-white">
       <Container>
-        <p>Warning!!! Please be careful when using this site, the Developers won't be responsible for any action incur by the site owner.</p>
+        <p>Disclamer: The site owner is responsible for all actions carried out on the website, not the Developers.</p>
       </Container>
     </div>
       <Container>
