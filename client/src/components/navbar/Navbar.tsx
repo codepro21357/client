@@ -56,14 +56,9 @@ const Navbar = () => {
   if (pathname.includes("/dashboard") || pathname === "/international") return;
 
   return (
-  <header className="w-full fixed text-white bg-soft-black z-50">
-    <div className="p-1 text-[8px] text-center text-red-500 bg-white">
+    <header className="w-full fixed py-5 text-white bg-soft-black z-50">
       <Container>
-        <p>Disclamer: The site owner is responsible for all actions carried out on the website, not the Developers.</p>
-      </Container>
-    </div>
-      <Container>
-        <div className="py-5 flex justify-between items-center">
+        <div className="flex justify-between items-center">
           <Logo />
           <div
             className="md:hidden z-[1] text-white cursor-pointer"
