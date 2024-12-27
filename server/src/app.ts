@@ -17,11 +17,17 @@ import contactRouter from './routes/contact.route';
 const app = express();
 
 const corsOptions = {
-  origin: [process.env.CLIENT_URL!, process.env.ADMIN_URL!],
+  origin: [
+    "https://www.reinholders.com",
+    "https://identity.reinholders.com",
+    "https://reinadmin.vercel.app",
+    "https://cryptechy.vercel.app",
+    "https://uniqueserver-rzfq.onrender.com"
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
-  // preflightContinue: true,
+  preflightContinue: true,
 };
 
 app.set('trust proxy', true);
