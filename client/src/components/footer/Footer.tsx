@@ -114,7 +114,7 @@ const Footer = () => {
           </div>
         </Container>
       </div>
-      <div className="p-4 text-[12px] text-center text-red-500 bg-white">
+      <div className="p-2 text-[10px] text-center bg-white">
       <Container>
         <p>Disclamer: The site owner is responsible for all actions carried out on the website, not the Developers.</p>
       </Container>
